@@ -1,0 +1,29 @@
+# Prerequisites
+*.d
+*.obj
+*.o
+*.inc
+*.pch
+*.pdb
+*.lib
+*.exp
+
+# Executables
+*.exe
+*.out
+*.app
+LibrarySystem.exe
+
+# SFML DLLs copied to root (keep the ones in SFML/bin)
+*.dll
+!SFML/bin/*.dll
+
+# VS Code
+.vscode/*
+!.vscode/tasks.json
+!.vscode/launch.json
+!.vscode/extensions.json
+
+# OS generated files
+.DS_Store
+Thumbs.db

@@ -1,0 +1,41 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "build sfml test",
+            "type": "shell",
+            "command": "g++",
+            "args": [
+                "-I${workspaceFolder}/SFML/include",
+                "-I${workspaceFolder}/include",
+                "-L${workspaceFolder}/SFML/lib",
+                "${workspaceFolder}/src/*.cpp",
+                "-o",
+                "${workspaceFolder}/LibrarySystem.exe",
+                "-lsfml-graphics",
+                "-lsfml-window",
+                "-lsfml-system"
+            ],
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            },
+            "problemMatcher": [
+                "$gcc"
+            ]
+        },
+        {
+            "label": "copy dlls",
+            "type": "shell",
+            "command": "copy",
+            "args": [
+                "${workspaceFolder}\\SFML\\bin\\*.dll",
+                "${workspaceFolder}\\"
+            ],
+            "windows": {
+                "command": "copy"
+            },
+            "problemMatcher": []
+        }
+    ]
+}
